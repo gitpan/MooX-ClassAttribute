@@ -14,12 +14,12 @@ not run its Makefile.PL or Build.PL.
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-SHA1 51df3e839e4e9c52594d9d2f7f48c9786ab6dcfd COPYRIGHT
-SHA1 b6c984869c3b220c11ddf9e6a7c44196c877629a Changes
+SHA1 f09778b6557ffe9a28d49e2474ba01c75cea7cbc COPYRIGHT
+SHA1 555781828d5621b2f69ede56eb5f823b8c0f00aa Changes
 SHA1 58e47fed556f626572681c48158a3ecd44ce179d HACKING
 SHA1 937d452c5c4069f4cda9ffaf45a33f1eb5f060e8 LICENSE
-SHA1 4a9d4485e87f699d362df664b6b104d6c7152095 MANIFEST
-SHA1 0f7e90791488b2eafd694341eb99e764b6fef155 META.yml
+SHA1 501194f127ca6d75d7f4c208cc30a77a48f50896 MANIFEST
+SHA1 8c99084775358e6f91b86df710fdaf10c453b7d5 META.yml
 SHA1 b9d5dd0b476253d37384aed42664179605286153 Makefile.PL
 SHA1 c02c11dc0909e6e8fa8dc9eeb4a48fcdda5f5ac0 README
 SHA1 22210e2dee46a0825cce213e5586a2b4d3fa6bc6 examples/binomial_name.pl
@@ -44,11 +44,11 @@ SHA1 0e0eed2e69d9583081868cf4f220068d0a018568 inc/Scalar/Util.pm
 SHA1 feb933cefe2e3762e8322bd6071a2499f3440da1 inc/YAML/Tiny.pm
 SHA1 8105c0510a773b56840995fb4dd2dc64fe9ddaee inc/unicore/Name.pm
 SHA1 36df501c7c9b73c282c5174ed54d8283b2f2cbf2 inc/utf8.pm
-SHA1 0a39536696c67deec7be8296e5e72ccde835fe62 lib/Method/Generate/ClassAccessor.pm
-SHA1 ea357135f4192f1b4a460a0db7a1dc6ef2d2a8a1 lib/MooX/CaptainHook.pm
-SHA1 214320cab6c91f0c05d39e248c016e36059b96e7 lib/MooX/ClassAttribute.pm
-SHA1 091c5329d3e134b1112e7bb18a326b8f9c0240e9 lib/MooX/ClassAttribute/HandleMoose.pm
-SHA1 222376b87498422e8c4eda682433d2c8ce2818a7 meta/changes.pret
+SHA1 06acfda6675d4c27b87e12b3f05442696a8d89b8 lib/Method/Generate/ClassAccessor.pm
+SHA1 2a059e6ab113b1710a53dbb6372be9121bf32936 lib/MooX/CaptainHook.pm
+SHA1 62e800f1e6d2bdd8ec895e332ba1df3f7d68725e lib/MooX/ClassAttribute.pm
+SHA1 7f80b0dcaf30b51ca8bd6368dc2d09997253e520 lib/MooX/ClassAttribute/HandleMoose.pm
+SHA1 d4269edf7b32a4980c754996addb3ec6c7510517 meta/changes.pret
 SHA1 1c48e6a12d81cb0042e1b7aee060d31a8225d966 meta/copyright.pret
 SHA1 941dde0de714f75d22ed768c5b9c78803b0ed817 meta/doap.pret
 SHA1 8d6aa34b7c75145e0b13222df55f536b77c17fdd meta/makefile.pret
@@ -62,11 +62,12 @@ SHA1 d606ad4ce76ad48153bfac61fafd353cce6dcd7f t/20hook_appl.t
 SHA1 13fae4e8b6ae89d9cd5701b32ca3187f05186d2a t/21hook_appl_moose.t
 SHA1 19573e5221b2ba759f2a5ef16af61feb705564fc t/22hook_infl.t
 SHA1 8c8b10a082af9a81e62e672966aa8c4bf86c1f01 t/23hook_infl_noop.t
+SHA1 ce1c70022cba965ae444af6e98c0f1f3a362a17b t/24hook_infl_backwards.t
 SHA1 4eba72cd796a5c8c866549201b8abd4114a69736 t/30mgca.t
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.10 (GNU/Linux)
 
-iEYEARECAAYFAlDlt6EACgkQzr+BKGoqfTlKmgCcDDbFAkehgBMPAt/nvOL7eV5E
-8FUAniTUE9yXQxXgLPYqFEjZwP5WHZjt
-=j5vo
+iEYEARECAAYFAlDl5K0ACgkQzr+BKGoqfTm5+QCgtKtKKdzE2JwNzJ79VY0iCLFJ
+DGAAmgL09Yf+yFzwuuUmVwYzImcq3+4P
+=RWtJ
 -----END PGP SIGNATURE-----

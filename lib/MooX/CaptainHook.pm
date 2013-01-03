@@ -11,7 +11,7 @@ use Sub::Exporter::Progressive -setup => {
 BEGIN {
 	no warnings 'once';
 	$MooX::CaptainHook::AUTHORITY = 'cpan:TOBYINK';
-	$MooX::CaptainHook::VERSION   = '0.002';
+	$MooX::CaptainHook::VERSION   = '0.003';
 }
 
 our %on_application;
@@ -48,7 +48,7 @@ use constant ON_APPLICATION => do {
 	BEGIN {
 		no warnings 'once';
 		$MooX::CaptainHook::OnApplication::AUTHORITY = 'cpan:TOBYINK';
-		$MooX::CaptainHook::OnApplication::VERSION   = '0.002';
+		$MooX::CaptainHook::OnApplication::VERSION   = '0.003';
 	}
 	use Moo::Role;
 	after apply_single_role_to_package => sub
@@ -90,7 +90,7 @@ sub _inflated
 				BEGIN {
 					no warnings 'once';
 					$MooX::CaptainHook::OnApplication::Moose::AUTHORITY = 'cpan:TOBYINK';
-					$MooX::CaptainHook::OnApplication::Moose::VERSION   = '0.002';
+					$MooX::CaptainHook::OnApplication::Moose::VERSION   = '0.003';
 				}
 				use Moose::Role;
 				after apply => sub {
@@ -137,7 +137,7 @@ use constant ON_INFLATION => do {
 	BEGIN {
 		no warnings 'once';
 		$MooX::CaptainHook::OnInflation::AUTHORITY = 'cpan:TOBYINK';
-		$MooX::CaptainHook::OnInflation::VERSION   = '0.002';
+		$MooX::CaptainHook::OnInflation::VERSION   = '0.003';
 	}
 	use Moo::Role;
 	around inject_real_metaclass_for => sub
@@ -162,13 +162,21 @@ sub on_inflation (&;$)
 	my ($code, $pkg) = @_;
 	$pkg = caller unless defined $pkg;
 	push @{$on_inflation{$pkg}||=[]}, $_[0];
-	
+
 	return;
 }
 
-require Moo::HandleMoose;
-'Moo::Role'->apply_single_role_to_package('Moo::HandleMoose', ON_INFLATION)
-	unless Role::Tiny::does_role('Moo::HandleMoose', ON_INFLATION);
+{
+	package MooX::CaptainHook::HandleMoose::Hack;
+	our $AUTHORITY = 'cpan:TOBYINK';
+	our $VERSION   = '0.003';
+	use overload qw[bool] => sub { 0 };
+	sub DESTROY {
+		'Moo::Role'->apply_single_role_to_package('Moo::HandleMoose', MooX::CaptainHook::ON_INFLATION)
+			unless Role::Tiny::does_role('Moo::HandleMoose', MooX::CaptainHook::ON_INFLATION);
+	}
+	$Moo::HandleMoose::SETUP_DONE = bless [];
+}
 
 1;
 
@@ -250,6 +258,14 @@ You can pass a package name as an optional second parameter:
       my ($applied_to, $role) = @_;
       ...;
    } 'Your::Role';
+
+=begin private
+
+=item ON_APPLICATION
+
+=item ON_INFLATION
+
+=end private
 
 =head1 BUGS
 

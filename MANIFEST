@@ -45,5 +45,6 @@ t/11role_moose.t
 t/20hook_appl.t
 t/21hook_appl_moose.t
 t/22hook_infl.t
+t/23hook_infl_noop.t
 t/30mgca.t
 SIGNATURE                                Public-key signature (added by MakeMaker)

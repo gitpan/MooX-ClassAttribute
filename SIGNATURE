@@ -15,11 +15,11 @@ not run its Makefile.PL or Build.PL.
 Hash: SHA1
 
 SHA1 f09778b6557ffe9a28d49e2474ba01c75cea7cbc COPYRIGHT
-SHA1 0bd110295ed65174bc2f2e0a22d7ccceae6156d1 Changes
+SHA1 9f645feeb7d1c92118e5175541efeab1fc9f1fdc Changes
 SHA1 58e47fed556f626572681c48158a3ecd44ce179d HACKING
 SHA1 937d452c5c4069f4cda9ffaf45a33f1eb5f060e8 LICENSE
 SHA1 501194f127ca6d75d7f4c208cc30a77a48f50896 MANIFEST
-SHA1 d277831507a5bc71f552b634f21694ed0b8e1b1a META.yml
+SHA1 686436fb917ffc055e6bdbcf3beae78da6e393a6 META.yml
 SHA1 b9d5dd0b476253d37384aed42664179605286153 Makefile.PL
 SHA1 c02c11dc0909e6e8fa8dc9eeb4a48fcdda5f5ac0 README
 SHA1 22210e2dee46a0825cce213e5586a2b4d3fa6bc6 examples/binomial_name.pl
@@ -44,11 +44,11 @@ SHA1 0e0eed2e69d9583081868cf4f220068d0a018568 inc/Scalar/Util.pm
 SHA1 feb933cefe2e3762e8322bd6071a2499f3440da1 inc/YAML/Tiny.pm
 SHA1 8105c0510a773b56840995fb4dd2dc64fe9ddaee inc/unicore/Name.pm
 SHA1 36df501c7c9b73c282c5174ed54d8283b2f2cbf2 inc/utf8.pm
-SHA1 a12d84afbc9c84cca9aca0ec7498943ac8559c4c lib/Method/Generate/ClassAccessor.pm
-SHA1 3b197ae583048bf9bd66821ef6886b48adb60d22 lib/MooX/CaptainHook.pm
-SHA1 e151adba9a5cc5f35abfca2de50e8271b6c900a5 lib/MooX/ClassAttribute.pm
-SHA1 821a1eaf6de3f5d27a18cdbda57ef3cd4b853432 lib/MooX/ClassAttribute/HandleMoose.pm
-SHA1 e5922f2ff07ecdc089eb260ea1b867f8e3fa8ee8 meta/changes.pret
+SHA1 94565bf1516824fc4d6c15a5e8f2e6c26aa3669f lib/Method/Generate/ClassAccessor.pm
+SHA1 5d7a616f379e5b5f2cf3cebd586e3c29c8fff4cc lib/MooX/CaptainHook.pm
+SHA1 74dc04d8398f91c88b1f3012af1a799525d8acf8 lib/MooX/ClassAttribute.pm
+SHA1 dd14eb73619149188c8f83481fef062c792e1f44 lib/MooX/ClassAttribute/HandleMoose.pm
+SHA1 d93fec00344bb0663d26587571ed74fe1ff13c90 meta/changes.pret
 SHA1 1c48e6a12d81cb0042e1b7aee060d31a8225d966 meta/copyright.pret
 SHA1 941dde0de714f75d22ed768c5b9c78803b0ed817 meta/doap.pret
 SHA1 8d6aa34b7c75145e0b13222df55f536b77c17fdd meta/makefile.pret
@@ -67,7 +67,7 @@ SHA1 4eba72cd796a5c8c866549201b8abd4114a69736 t/30mgca.t
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.10 (GNU/Linux)
 
-iEYEARECAAYFAlDnyxcACgkQzr+BKGoqfTlQEQCePM8lD7OIikr5mf3LlDmuiAAy
-QXwAn3EdH054gZrCWI2j+bXUMV5FE37C
-=WV34
+iEYEARECAAYFAlDvyGYACgkQzr+BKGoqfTlNQwCdEtw0l1Wq1orVKsJ321Acd3by
+THEAoK/hXiZKnN08J2HhW1a90DYJ8vIW
+=bB8I
 -----END PGP SIGNATURE-----

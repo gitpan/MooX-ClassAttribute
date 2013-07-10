@@ -6,6 +6,14 @@ Home page:    <https://metacpan.org/release/MooX-ClassAttribute>
 Bug tracker:  <http://rt.cpan.org/Dist/Display.html?Queue=MooX-ClassAttribute>
 Maintainer:   Toby Inkster <mailto:tobyink@cpan.org>
 
+0.007  2013-07-10
+
+ - (Bugfix) Fixed error: Can't call method "isa" on an undefined value at
+   MooX/CaptainHook.pm line 27.
+   Fixes RT#86828
+   ++$DREBOLO
+ - (Documentation) Note incompatibility with Moo 1.001000.
+
 0.006  2013-01-11
 
  - (Bugfix) Avoid triggering an 'in cleanup' error on some older versions

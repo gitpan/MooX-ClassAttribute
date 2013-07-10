@@ -8,7 +8,7 @@ no warnings qw( void once uninitialized numeric );
 BEGIN {
 	no warnings 'once';
 	$Method::Generate::ClassAccessor::AUTHORITY = 'cpan:TOBYINK';
-	$Method::Generate::ClassAccessor::VERSION   = '0.006';
+	$Method::Generate::ClassAccessor::VERSION   = '0.007';
 }
 
 use B 'perlstring';
@@ -98,6 +98,11 @@ This class overrides the following methods:
 =item C<_generate_simple_clear>
 
 =back
+
+=head1 CAVEATS
+
+B<< Moo 1.001000 has a bug that breaks this module. >>
+Any other Moo should be fine and dandy.
 
 =head1 BUGS
 

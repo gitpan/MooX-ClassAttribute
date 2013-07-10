@@ -6,7 +6,7 @@ use warnings;
 
 BEGIN {
 	$MooX::ClassAttribute::AUTHORITY = 'cpan:TOBYINK';
-	$MooX::ClassAttribute::VERSION   = '0.006';
+	$MooX::ClassAttribute::VERSION   = '0.007';
 }
 
 use Carp;
@@ -173,6 +173,8 @@ scare you though; I'm usually pretty quick to fix bugs once they're reported.
 
 Please report any bugs to
 L<http://rt.cpan.org/Dist/Display.html?Queue=MooX-ClassAttribute>.
+
+See also: L<Method::Generate::ClassAttribute/CAVEATS>.
 
 =head1 SEE ALSO
 

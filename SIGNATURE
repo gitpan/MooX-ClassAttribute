@@ -15,46 +15,25 @@ not run its Makefile.PL or Build.PL.
 Hash: SHA1
 
 SHA1 294505f858f11dd062e9916e3f50d88210a9ef54 CONTRIBUTING
-SHA1 ffe171979d814fe61c025cd09e668ba05b15303e COPYRIGHT
-SHA1 463b3a5da2ac05b800e7da3cdf53004a1084064d CREDITS
-SHA1 27d5f3feb09b3f7b5d95be29bc79850dd83e0854 Changes
-SHA1 937d452c5c4069f4cda9ffaf45a33f1eb5f060e8 LICENSE
-SHA1 08df512858119e54b49d1321bf046f98f3fa222e MANIFEST
-SHA1 d773c7465466ac13efd7ea5e5df503ed58491403 META.ttl
-SHA1 de2ca090c95aa6b572c36c0b151f4045a8fa07a4 META.yml
-SHA1 b9d5dd0b476253d37384aed42664179605286153 Makefile.PL
-SHA1 05359745cd160c86525f9bbffed4f8463854ae13 README
+SHA1 6534dd30c9473d99c408a0b8bed56ef720e6cc42 COPYRIGHT
+SHA1 c64395b4315afecf6a7c5e91bc9f0070273881b4 CREDITS
+SHA1 87818ac9dba4abf6b8b4524b64095b72e5076227 Changes
+SHA1 ec5a7b4f3023f03ebf821b57690758f7e6f3ae2a LICENSE
+SHA1 6f17a39fc5133205fc02741aee45f4f091455de2 MANIFEST
+SHA1 e43b460a6867fc7187374d623d2cecda9d0c3812 META.json
+SHA1 2046da1e9213f3a1210920065b2f7bcb5598ba29 META.ttl
+SHA1 18ede812fd4edfd96c56226d89d23226f0b9e265 META.yml
+SHA1 33e1ae90ec5786e7cf665555a1bb4891adfb6bce Makefile.PL
+SHA1 8ad9f9a07f649fb19c73ecd360eaead7baf0b826 README
+SHA1 e81357bfbb51ed84ea6ab2b0417f1425d5fa5323 dist.ini
 SHA1 22210e2dee46a0825cce213e5586a2b4d3fa6bc6 examples/binomial_name.pl
 SHA1 7f9dfb385c9c80a75505491cfe16b0f910ff283d examples/hooks/track-consumers.pl
-SHA1 06c410f05488c1612ed66b06d3a86b2580581e4a inc/Module/AutoInstall.pm
-SHA1 8a924add836b60fb23b25c8506d45945e02f42f4 inc/Module/Install.pm
-SHA1 61ab1dd37e33ddbe155907ce51df8a3e56ac8bbf inc/Module/Install/AutoInstall.pm
-SHA1 c04f94f91fa97b9f8cfb5a36071098ab0e6c78e3 inc/Module/Install/AutoManifest.pm
-SHA1 2d0fad3bf255f8c1e7e1e34eafccc4f595603ddc inc/Module/Install/Base.pm
-SHA1 f0e01fff7d73cd145fbf22331579918d4628ddb0 inc/Module/Install/Can.pm
-SHA1 9e4cc10c7f138a3f2c60d9ee1f34261f0d8c5aae inc/Module/Install/Contributors.pm
-SHA1 7328966e4fda0c8451a6d3850704da0b84ac1540 inc/Module/Install/Fetch.pm
-SHA1 66d3d335a03492583a3be121a7d888f63f08412c inc/Module/Install/Include.pm
-SHA1 b62ca5e2d58fa66766ccf4d64574f9e1a2250b34 inc/Module/Install/Makefile.pm
-SHA1 1aa925be410bb3bfcd84a16985921f66073cc1d2 inc/Module/Install/Metadata.pm
-SHA1 3b9281ddf7dd6d6f5de0a9642c69333023193c80 inc/Module/Install/Package.pm
-SHA1 41f76ff6b39368a65da86377e43b34bacc2fb0eb inc/Module/Install/TrustMetaYml.pm
-SHA1 e4196994fa75e98bdfa2be0bdeeffef66de88171 inc/Module/Install/Win32.pm
-SHA1 c3a6d0d5b84feb3280622e9599e86247d58b0d18 inc/Module/Install/WriteAll.pm
-SHA1 26d58a041cd6b3d21db98b32e8fd1841aae21204 inc/Module/Package.pm
-SHA1 5a2f84a7a82eee0d1e5ed3628fe503a608efc10f inc/Module/Package/Dist/RDF.pm
-SHA1 feb933cefe2e3762e8322bd6071a2499f3440da1 inc/YAML/Tiny.pm
-SHA1 ad95c5ced520e73cae8f485acfb2a45ebc6449e9 lib/Method/Generate/ClassAccessor.pm
-SHA1 ac23d3ed660aacfd495919fbab6bd48919939bdc lib/MooX/CaptainHook.pm
-SHA1 27b1c21bbbddc7eed445d7da0d910fef0759070b lib/MooX/ClassAttribute.pm
-SHA1 42103eba18b77084a1300bba7962524a736ae4c1 lib/MooX/ClassAttribute/HandleMoose.pm
-SHA1 7827536c1d798ebc5e7949986a6823ebd288ddb1 meta/changes.pret
-SHA1 1c48e6a12d81cb0042e1b7aee060d31a8225d966 meta/copyright.pret
-SHA1 894c01190151306030615bdcacce093409f2ad19 meta/doap.pret
-SHA1 8d6aa34b7c75145e0b13222df55f536b77c17fdd meta/makefile.pret
-SHA1 355af2dc97f26a09ecdc3d3469272e3dbf87bba9 meta/people.pret
+SHA1 90c6ad73de191e4ea7f06251dd477978ac83293e lib/Method/Generate/ClassAccessor.pm
+SHA1 7418280466c3c4d749e834f80b700edadad49ed7 lib/MooX/CaptainHook.pm
+SHA1 536c4e9fcaf299813a1445cdd62a4fd6b4757ad2 lib/MooX/ClassAttribute.pm
+SHA1 1afdaf50b34dd58159df7387601cb412b7a96870 lib/MooX/ClassAttribute/HandleMoose.pm
 SHA1 1066638f41ba247cdce1ea366d05dade40b5e5a2 t/01basic.t
-SHA1 bd22a9961455f596c449fb221a4de59f3cb955aa t/02class.t
+SHA1 fc22ad5a0aed333487aa336aefd4f0c318b84358 t/02class.t
 SHA1 a253b748e0c941f43a63773dfc620362ad6d5d8d t/03role.t
 SHA1 23b731db9fd31c079253b4d9005d7f1b7f4870a5 t/10class_moose.t
 SHA1 b61b4f6919fa529428c1e751cda504c5213e201e t/11role_moose.t
@@ -67,7 +46,7 @@ SHA1 4eba72cd796a5c8c866549201b8abd4114a69736 t/30mgca.t
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.12 (GNU/Linux)
 
-iEYEARECAAYFAlHdtTkACgkQzr+BKGoqfTk3KwCfUYeH0Bty/SwZn/OXgcOJMj8u
-HwAAniwuelXVCOBZvbZvzYRNQ8XmrpnB
-=vGtX
+iEYEARECAAYFAlIGxQgACgkQzr+BKGoqfTkimACfe0itNqM/e3G/ToTog05SA+V8
+FfkAmwdZE/C3K70GWpxEC/h8sw3OUOf7
+=1uim
 -----END PGP SIGNATURE-----

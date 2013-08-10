@@ -2,38 +2,61 @@
 abstract: 'declare class attributes Moose-style... but without Moose'
 author:
   - 'Toby Inkster <tobyink@cpan.org>'
-build_requires:
-  ExtUtils::MakeMaker: 6.59
+build_requires: {}
 configure_requires:
-  ExtUtils::MakeMaker: 6.59
-distribution_type: module
+  ExtUtils::MakeMaker: 6.17
 dynamic_config: 0
-generated_by: 'Module::Install version 1.06'
+generated_by: 'Dist::Inkt::Profile::TOBYINK version 0.004, CPAN::Meta::Converter version 2.120921'
 keywords: []
-license: perl
+license: unknown
 meta-spec:
   url: http://module-build.sourceforge.net/META-spec-v1.4.html
   version: 1.4
-module_name: MooX::ClassAttribute
 name: MooX-ClassAttribute
 no_index:
   directory:
+    - eg
     - examples
     - inc
     - t
     - xt
+provides:
+  Method::Generate::ClassAccessor:
+    file: lib/Method/Generate/ClassAccessor.pm
+    version: 0.008
+  MooX::CaptainHook:
+    file: lib/MooX/CaptainHook.pm
+    version: 0.008
+  MooX::CaptainHook::HandleMoose::Hack:
+    file: lib/MooX/CaptainHook.pm
+    version: 0.008
+  MooX::CaptainHook::OnApplication:
+    file: lib/MooX/CaptainHook.pm
+    version: 0.008
+  MooX::CaptainHook::OnApplication::Moose:
+    file: lib/MooX/CaptainHook.pm
+    version: 0.008
+  MooX::CaptainHook::OnInflation:
+    file: lib/MooX/CaptainHook.pm
+    version: 0.008
+  MooX::ClassAttribute:
+    file: lib/MooX/ClassAttribute.pm
+    version: 0.008
+  MooX::ClassAttribute::HandleMoose:
+    file: lib/MooX/ClassAttribute/HandleMoose.pm
+    version: 0.008
 recommends:
   MooseX::ClassAttribute: 0
 requires:
   Moo: 1.000000
-  Role::Tiny: 0
+  Role::Tiny: 1.000000
   Sub::Exporter::Progressive: 0
-  perl: 5.8.0
 resources:
   bugtracker: http://rt.cpan.org/Dist/Display.html?Queue=MooX-ClassAttribute
   homepage: https://metacpan.org/release/MooX-ClassAttribute
   license: http://dev.perl.org/licenses/
   repository: https://github.com/tobyink/p5-moox-classattribute
-version: 0.007
+version: 0.008
 x_contributors:
   - 'Dinis Rebolo <drebolo@cpan.org>'
+x_provides_scripts: {}

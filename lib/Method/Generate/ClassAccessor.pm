@@ -8,7 +8,7 @@ no warnings qw( void once uninitialized numeric );
 BEGIN {
 	no warnings 'once';
 	$Method::Generate::ClassAccessor::AUTHORITY = 'cpan:TOBYINK';
-	$Method::Generate::ClassAccessor::VERSION   = '0.007';
+	$Method::Generate::ClassAccessor::VERSION   = '0.008';
 }
 
 use B 'perlstring';
@@ -29,13 +29,19 @@ sub generate_method
 			no strict 'refs';
 			\%{"$spec->{_classy}\::__ClassAttributeValues"};
 		};
-		if (my $default = $spec->{default})
+		
+		my $default;
+		if (ref($default = $spec->{default}))
 		{
 			$storage->{$name} = $default->($into);
 		}
-		elsif (my $builder = $spec->{builder})
+		elsif ($default = $spec->{default})
 		{
-			$storage->{$name} = $into->$builder;
+			$storage->{$name} = $default;
+		}
+		elsif ($default = $spec->{builder})
+		{
+			$storage->{$name} = $into->$default;
 		}
 	}
 	

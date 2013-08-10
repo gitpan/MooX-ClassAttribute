@@ -5,7 +5,6 @@ Source: https://metacpan.org/release/MooX-ClassAttribute
 
 Files: examples/binomial_name.pl
  examples/hooks/track-consumers.pl
- inc/Module/Install/Contributors.pm
  lib/Method/Generate/ClassAccessor.pm
  lib/MooX/CaptainHook.pm
  lib/MooX/ClassAttribute.pm
@@ -24,59 +23,27 @@ Files: examples/binomial_name.pl
 Copyright: This software is copyright (c) 2013 by Toby Inkster.
 License: GPL-1.0+ or Artistic-1.0
 
-Files: Changes
- README
- meta/changes.pret
- meta/doap.pret
- meta/makefile.pret
- meta/people.pret
-Copyright: Copyright 2013 Toby Inkster.
-License: GPL-1.0+ or Artistic-1.0
-
 Files: CONTRIBUTING
  CREDITS
  LICENSE
- MANIFEST.SKIP
+ META.json
  META.ttl
+ META.yml
+ SIGNATURE
+ dist.ini
 Copyright: Unknown
 License: Unknown
 
-Files: inc/Module/Install.pm
- inc/Module/Install/Include.pm
- inc/Module/Install/Metadata.pm
-Copyright: Copyright 2002 - 2012 Brian Ingerson, Audrey Tang and Adam Kennedy.
-License: GPL-1.0+ or Artistic-1.0
-
-Files: inc/Module/Install/TrustMetaYml.pm
- inc/Module/Package/Dist/RDF.pm
-Copyright: This software is copyright (c) 2011-2012 by Toby Inkster.
-License: GPL-1.0+ or Artistic-1.0
-
-Files: Makefile.PL
- meta/copyright.pret
-Copyright: Copyright 2012 Toby Inkster.
+Files: Changes
+ Makefile.PL
+ README
+Copyright: Copyright 1970 Toby Inkster.
 License: GPL-1.0+ or Artistic-1.0
 
 Files: COPYRIGHT
 Copyright: None
 License: public-domain
 Comment: This file! Automatically generated.
-
-Files: inc/Module/Install/Package.pm
-Copyright: Copyright (c) 2011. Ingy doet Net.
-License: GPL-1.0+ or Artistic-1.0
-
-Files: inc/Module/Install/Makefile.pm
-Copyright: Copyright 2002, 2003, 2004 Audrey Tang and Brian Ingerson.
-License: GPL-1.0+ or Artistic-1.0
-
-Files: inc/YAML/Tiny.pm
-Copyright: Copyright 2006 - 2012 Adam Kennedy.
-License: GPL-1.0+ or Artistic-1.0
-
-Files: inc/Module/Install/Base.pm
-Copyright: Copyright 2003, 2004 by Audrey Tang <autrijus@autrijus.org>.
-License: GPL-1.0+ or Artistic-1.0
 
 License: Artistic-1.0
  This software is Copyright (c) 2013 by the copyright holder(s).
@@ -91,4 +58,3 @@ License: GPL-1.0
  This is free software, licensed under:
  
    The GNU General Public License, Version 1, February 1989
-

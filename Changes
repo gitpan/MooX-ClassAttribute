@@ -6,6 +6,13 @@ Home page:    <https://metacpan.org/release/MooX-ClassAttribute>
 Bug tracker:  <http://rt.cpan.org/Dist/Display.html?Queue=MooX-ClassAttribute>
 Maintainer:   Toby Inkster <mailto:tobyink@cpan.org>
 
+0.008  2013-07-10
+
+ - (Bugfix) Support non-coderef defaults.
+   Fixes RT#87638
+   ++"Rob Bloodgood"
+ - (Packaging) Switch to Dist::Inkt.
+
 0.007  2013-07-10
 
  - (Bugfix) Fixed error: Can't call method "isa" on an undefined value at
@@ -37,6 +44,6 @@ Maintainer:   Toby Inkster <mailto:tobyink@cpan.org>
 
  - (Packaging) List dependencies.
 
-0.001  2013-01-01  # Initial release
+0.001  2013-01-01  Initial release
 
 

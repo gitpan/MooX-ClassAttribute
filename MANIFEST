@@ -5,12 +5,12 @@ Changes
 LICENSE
 MANIFEST
 META.json
-META.ttl
 META.yml
 Makefile.PL
 README
 SIGNATURE
 dist.ini
+doap.ttl
 examples/binomial_name.pl
 examples/hooks/track-consumers.pl
 lib/Method/Generate/ClassAccessor.pm

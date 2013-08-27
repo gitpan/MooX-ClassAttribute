@@ -1,6 +1,6 @@
 Format: http://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
 Upstream-Name: MooX-ClassAttribute
-Upstream-Contact: Toby Inkster <tobyink@cpan.org>
+Upstream-Contact: Toby Inkster (TOBYINK) <tobyink@cpan.org>
 Source: https://metacpan.org/release/MooX-ClassAttribute
 
 Files: examples/binomial_name.pl
@@ -23,16 +23,18 @@ Files: examples/binomial_name.pl
 Copyright: This software is copyright (c) 2013 by Toby Inkster.
 License: GPL-1.0+ or Artistic-1.0
 
-Files: CONTRIBUTING
- CREDITS
- LICENSE
- META.json
- META.ttl
+Files: META.json
  META.yml
- SIGNATURE
  dist.ini
-Copyright: Unknown
-License: Unknown
+ doap.ttl
+Copyright: Copyright 2013 Toby Inkster.
+License: GPL-1.0+ or Artistic-1.0
+
+Files: COPYRIGHT
+ CREDITS
+ SIGNATURE
+Copyright: None
+License: public-domain
 
 Files: Changes
  Makefile.PL
@@ -40,10 +42,10 @@ Files: Changes
 Copyright: Copyright 1970 Toby Inkster.
 License: GPL-1.0+ or Artistic-1.0
 
-Files: COPYRIGHT
-Copyright: None
-License: public-domain
-Comment: This file! Automatically generated.
+Files: CONTRIBUTING
+ LICENSE
+Copyright: Unknown
+License: Unknown
 
 License: Artistic-1.0
  This software is Copyright (c) 2013 by the copyright holder(s).

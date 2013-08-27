@@ -1,10 +1,10 @@
 {
    "abstract" : "declare class attributes Moose-style... but without Moose",
    "author" : [
-      "Toby Inkster <tobyink@cpan.org>"
+      "Toby Inkster (TOBYINK) <tobyink@cpan.org>"
    ],
    "dynamic_config" : 0,
-   "generated_by" : "Dist::Inkt::Profile::TOBYINK version 0.004, CPAN::Meta::Converter version 2.120921",
+   "generated_by" : "Dist::Inkt::Profile::TOBYINK version 0.007, CPAN::Meta::Converter version 2.120921",
    "keywords" : [],
    "license" : [
       "perl"
@@ -30,8 +30,13 @@
          }
       },
       "develop" : {
+         "recommends" : {
+            "Dist::Inkt" : 0
+         },
          "requires" : {
-            "MooseX::ClassAttribute" : 0
+            "Moose" : 0,
+            "MooseX::ClassAttribute" : 0,
+            "Sub::Exporter" : 0
          }
       },
       "runtime" : {
@@ -48,39 +53,40 @@
    "provides" : {
       "Method::Generate::ClassAccessor" : {
          "file" : "lib/Method/Generate/ClassAccessor.pm",
-         "version" : "0.008"
+         "version" : "0.009"
       },
       "MooX::CaptainHook" : {
          "file" : "lib/MooX/CaptainHook.pm",
-         "version" : "0.008"
+         "version" : "0.009"
       },
       "MooX::CaptainHook::HandleMoose::Hack" : {
          "file" : "lib/MooX/CaptainHook.pm",
-         "version" : "0.008"
+         "version" : "0.009"
       },
       "MooX::CaptainHook::OnApplication" : {
          "file" : "lib/MooX/CaptainHook.pm",
-         "version" : "0.008"
+         "version" : "0.009"
       },
       "MooX::CaptainHook::OnApplication::Moose" : {
          "file" : "lib/MooX/CaptainHook.pm",
-         "version" : "0.008"
+         "version" : "0.009"
       },
       "MooX::CaptainHook::OnInflation" : {
          "file" : "lib/MooX/CaptainHook.pm",
-         "version" : "0.008"
+         "version" : "0.009"
       },
       "MooX::ClassAttribute" : {
          "file" : "lib/MooX/ClassAttribute.pm",
-         "version" : "0.008"
+         "version" : "0.009"
       },
       "MooX::ClassAttribute::HandleMoose" : {
          "file" : "lib/MooX/ClassAttribute/HandleMoose.pm",
-         "version" : "0.008"
+         "version" : "0.009"
       }
    },
    "release_status" : "stable",
    "resources" : {
+      "X_identifier" : "http://purl.org/NET/cpan-uri/dist/MooX-ClassAttribute/project",
       "bugtracker" : {
          "web" : "http://rt.cpan.org/Dist/Display.html?Queue=MooX-ClassAttribute"
       },
@@ -93,9 +99,9 @@
          "web" : "https://github.com/tobyink/p5-moox-classattribute"
       }
    },
-   "version" : "0.008",
+   "version" : "0.009",
    "x_contributors" : [
-      "Dinis Rebolo <drebolo@cpan.org>"
+      "Dinis Rebolo (DREBOLO) <drebolo@cpan.org>"
    ],
    "x_provides_scripts" : {}
 }

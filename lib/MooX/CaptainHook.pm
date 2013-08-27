@@ -11,7 +11,7 @@ use Sub::Exporter::Progressive -setup => {
 BEGIN {
 	no warnings 'once';
 	$MooX::CaptainHook::AUTHORITY = 'cpan:TOBYINK';
-	$MooX::CaptainHook::VERSION   = '0.008';
+	$MooX::CaptainHook::VERSION   = '0.009';
 }
 
 our %on_application;
@@ -49,22 +49,26 @@ use constant ON_APPLICATION => do {
 	BEGIN {
 		no warnings 'once';
 		$MooX::CaptainHook::OnApplication::AUTHORITY = 'cpan:TOBYINK';
-		$MooX::CaptainHook::OnApplication::VERSION   = '0.008';
+		$MooX::CaptainHook::OnApplication::VERSION   = '0.009';
 	}
 	use Moo::Role;
-	after apply_single_role_to_package => sub
+	after apply_roles_to_package => sub
 	{
-		my ($toolage, $package, $role) = @_;
-		'MooX::CaptainHook'->_fire(
-			$on_application{$role},
-			"OnApplication: $package $role",
-			[ $package, $role ],
-		);
+		my ($toolage, $package, @roles) = @_;
 		
-		# This stuff is for internals...
-		push @{ $on_application{$package} ||= [] }, @{ $on_application{$role} || [] }
-			if MooX::CaptainHook::is_role($package);
-		push @{ $on_inflation{$package} ||= [] }, @{ $on_inflation{$role} || [] };
+		for my $role (@roles)
+		{
+			'MooX::CaptainHook'->_fire(
+				$on_application{$role},
+				"OnApplication: $package $role",
+				[ $package, $role ],
+			);
+			
+			# This stuff is for internals...
+			push @{ $on_application{$package} ||= [] }, @{ $on_application{$role} || [] }
+				if MooX::CaptainHook::is_role($package);
+			push @{ $on_inflation{$package} ||= [] }, @{ $on_inflation{$role} || [] };
+		}
 	};
 	__PACKAGE__;
 };
@@ -91,7 +95,7 @@ sub _inflated
 				BEGIN {
 					no warnings 'once';
 					$MooX::CaptainHook::OnApplication::Moose::AUTHORITY = 'cpan:TOBYINK';
-					$MooX::CaptainHook::OnApplication::Moose::VERSION   = '0.008';
+					$MooX::CaptainHook::OnApplication::Moose::VERSION   = '0.009';
 				}
 				use Moose::Role;
 				after apply => sub {
@@ -138,7 +142,7 @@ use constant ON_INFLATION => do {
 	BEGIN {
 		no warnings 'once';
 		$MooX::CaptainHook::OnInflation::AUTHORITY = 'cpan:TOBYINK';
-		$MooX::CaptainHook::OnInflation::VERSION   = '0.008';
+		$MooX::CaptainHook::OnInflation::VERSION   = '0.009';
 	}
 	use Moo::Role;
 	around inject_real_metaclass_for => sub
@@ -170,7 +174,7 @@ sub on_inflation (&;$)
 {
 	package MooX::CaptainHook::HandleMoose::Hack;
 	our $AUTHORITY = 'cpan:TOBYINK';
-	our $VERSION   = '0.008';
+	our $VERSION   = '0.009';
 	use overload qw[bool] => sub { 0 };
 	sub DESTROY {
 		'Moo::Role'->apply_single_role_to_package('Moo::HandleMoose', MooX::CaptainHook::ON_INFLATION)

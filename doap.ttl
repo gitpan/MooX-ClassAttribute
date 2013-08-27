@@ -14,9 +14,10 @@
 <http://purl.org/NET/cpan-uri/dist/MooX-ClassAttribute/project>
 	a                    doap:Project;
 	dc:contributor       <http://purl.org/NET/cpan-uri/person/tobyink>;
-	doap-deps:develop-requirement [
+	doap-deps:develop-recommendation [ doap-deps:on "Dist::Inkt"^^doap-deps:CpanId ];
+	doap-deps:develop-requirement [ doap-deps:on "Moose"^^doap-deps:CpanId ], [
 		doap-deps:on "MooseX::ClassAttribute"^^doap-deps:CpanId;
-	];
+	], [ doap-deps:on "Sub::Exporter"^^doap-deps:CpanId ];
 	doap-deps:runtime-recommendation [
 		doap-deps:on "MooseX::ClassAttribute"^^doap-deps:CpanId;
 	];
@@ -34,7 +35,7 @@
 	doap:maintainer      <http://purl.org/NET/cpan-uri/person/tobyink>;
 	doap:name            "MooX-ClassAttribute";
 	doap:programming-language "Perl";
-	doap:release         <http://purl.org/NET/cpan-uri/dist/MooX-ClassAttribute/v_0-001>, <http://purl.org/NET/cpan-uri/dist/MooX-ClassAttribute/v_0-002>, <http://purl.org/NET/cpan-uri/dist/MooX-ClassAttribute/v_0-003>, <http://purl.org/NET/cpan-uri/dist/MooX-ClassAttribute/v_0-004>, <http://purl.org/NET/cpan-uri/dist/MooX-ClassAttribute/v_0-005>, <http://purl.org/NET/cpan-uri/dist/MooX-ClassAttribute/v_0-006>, <http://purl.org/NET/cpan-uri/dist/MooX-ClassAttribute/v_0-007>, <http://purl.org/NET/cpan-uri/dist/MooX-ClassAttribute/v_0-008>;
+	doap:release         <http://purl.org/NET/cpan-uri/dist/MooX-ClassAttribute/v_0-001>, <http://purl.org/NET/cpan-uri/dist/MooX-ClassAttribute/v_0-002>, <http://purl.org/NET/cpan-uri/dist/MooX-ClassAttribute/v_0-003>, <http://purl.org/NET/cpan-uri/dist/MooX-ClassAttribute/v_0-004>, <http://purl.org/NET/cpan-uri/dist/MooX-ClassAttribute/v_0-005>, <http://purl.org/NET/cpan-uri/dist/MooX-ClassAttribute/v_0-006>, <http://purl.org/NET/cpan-uri/dist/MooX-ClassAttribute/v_0-007>, <http://purl.org/NET/cpan-uri/dist/MooX-ClassAttribute/v_0-008>, <http://purl.org/NET/cpan-uri/dist/MooX-ClassAttribute/v_0-009>;
 	doap:repository      [
 		a doap:GitRepository;
 		doap:browse <https://github.com/tobyink/p5-moox-classattribute>;
@@ -162,11 +163,32 @@
 	doap:file-release    <http://backpan.cpan.org/authors/id/T/TO/TOBYINK/MooX-ClassAttribute-0.008.tar.gz>;
 	doap:revision        "0.008"^^xsd:string.
 
+<http://purl.org/NET/cpan-uri/dist/MooX-ClassAttribute/v_0-009>
+	a                    doap:Version;
+	dc:identifier        "MooX-ClassAttribute-0.009"^^xsd:string;
+	dc:issued            "2013-08-27"^^xsd:date;
+	doap-changeset:changeset [
+		doap-changeset:item [
+			a doap-changeset:Bugfix;
+			rdfs:label "Fix MooX::CaptainHook's `on_application` hook to work with recent versions of Moo::Role/Role::Tiny which do not always call `apply_single_role_to_package`.";
+			doap-changeset:thanks <http://purl.org/NET/cpan-uri/person/haarg>;
+		];
+	];
+	doap-changeset:released-by <http://purl.org/NET/cpan-uri/person/tobyink>;
+	doap:file-release    <http://backpan.cpan.org/authors/id/T/TO/TOBYINK/MooX-ClassAttribute-0.009.tar.gz>;
+	doap:revision        "0.009"^^xsd:string.
+
 <http://purl.org/NET/cpan-uri/person/drebolo>
 	a                    foaf:Person;
 	foaf:name            "Dinis Rebolo";
 	foaf:nick            "DREBOLO";
 	foaf:page            <https://metacpan.org/author/DREBOLO>.
+
+<http://purl.org/NET/cpan-uri/person/haarg>
+	a                    foaf:Person;
+	foaf:name            "Graham Knop";
+	foaf:nick            "HAARG";
+	foaf:page            <https://metacpan.org/author/HAARG>.
 
 <http://purl.org/NET/cpan-uri/person/mauke>
 	a                    foaf:Person;

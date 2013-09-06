@@ -18,6 +18,7 @@
 	doap-deps:develop-requirement [ doap-deps:on "Moose"^^doap-deps:CpanId ], [
 		doap-deps:on "MooseX::ClassAttribute"^^doap-deps:CpanId;
 	], [ doap-deps:on "Sub::Exporter"^^doap-deps:CpanId ];
+	doap-deps:runtime-conflict [ doap-deps:on "Moo == 1.001000"^^doap-deps:CpanId ];
 	doap-deps:runtime-recommendation [
 		doap-deps:on "MooseX::ClassAttribute"^^doap-deps:CpanId;
 	];
@@ -35,7 +36,7 @@
 	doap:maintainer      <http://purl.org/NET/cpan-uri/person/tobyink>;
 	doap:name            "MooX-ClassAttribute";
 	doap:programming-language "Perl";
-	doap:release         <http://purl.org/NET/cpan-uri/dist/MooX-ClassAttribute/v_0-001>, <http://purl.org/NET/cpan-uri/dist/MooX-ClassAttribute/v_0-002>, <http://purl.org/NET/cpan-uri/dist/MooX-ClassAttribute/v_0-003>, <http://purl.org/NET/cpan-uri/dist/MooX-ClassAttribute/v_0-004>, <http://purl.org/NET/cpan-uri/dist/MooX-ClassAttribute/v_0-005>, <http://purl.org/NET/cpan-uri/dist/MooX-ClassAttribute/v_0-006>, <http://purl.org/NET/cpan-uri/dist/MooX-ClassAttribute/v_0-007>, <http://purl.org/NET/cpan-uri/dist/MooX-ClassAttribute/v_0-008>, <http://purl.org/NET/cpan-uri/dist/MooX-ClassAttribute/v_0-009>;
+	doap:release         <http://purl.org/NET/cpan-uri/dist/MooX-ClassAttribute/v_0-001>, <http://purl.org/NET/cpan-uri/dist/MooX-ClassAttribute/v_0-002>, <http://purl.org/NET/cpan-uri/dist/MooX-ClassAttribute/v_0-003>, <http://purl.org/NET/cpan-uri/dist/MooX-ClassAttribute/v_0-004>, <http://purl.org/NET/cpan-uri/dist/MooX-ClassAttribute/v_0-005>, <http://purl.org/NET/cpan-uri/dist/MooX-ClassAttribute/v_0-006>, <http://purl.org/NET/cpan-uri/dist/MooX-ClassAttribute/v_0-007>, <http://purl.org/NET/cpan-uri/dist/MooX-ClassAttribute/v_0-008>, <http://purl.org/NET/cpan-uri/dist/MooX-ClassAttribute/v_0-009>, <http://purl.org/NET/cpan-uri/dist/MooX-ClassAttribute/v_0-010>;
 	doap:repository      [
 		a doap:GitRepository;
 		doap:browse <https://github.com/tobyink/p5-moox-classattribute>;
@@ -178,6 +179,34 @@
 	doap:file-release    <http://backpan.cpan.org/authors/id/T/TO/TOBYINK/MooX-ClassAttribute-0.009.tar.gz>;
 	doap:revision        "0.009"^^xsd:string.
 
+<http://purl.org/NET/cpan-uri/dist/MooX-ClassAttribute/v_0-010>
+	a                    doap:Version;
+	dc:identifier        "MooX-ClassAttribute-0.010"^^xsd:string;
+	dc:issued            "2013-09-06"^^xsd:date;
+	doap-changeset:changeset [
+		doap-changeset:item [
+			a doap-changeset:Bugfix, doap-changeset:Tests;
+			rdfs:label "Skip test case that requires Moo 1.002000 on older versions of Moo.";
+			doap-changeset:fixes <http://purl.org/NET/cpan-uri/rt/ticket/88459>;
+			doap-changeset:thanks <http://purl.org/NET/cpan-uri/person/andk>;
+		], [
+			a doap-changeset:Documentation;
+			rdfs:label "Correct link to Method::Generate::ClassAccessor in documentation.";
+		], [
+			a doap-changeset:Packaging;
+			rdfs:label "Conflict detection for Moo == 1.001000 in Makefile.PL.";
+		];
+	];
+	doap-changeset:released-by <http://purl.org/NET/cpan-uri/person/tobyink>;
+	doap:file-release    <http://backpan.cpan.org/authors/id/T/TO/TOBYINK/MooX-ClassAttribute-0.010.tar.gz>;
+	doap:revision        "0.010"^^xsd:string.
+
+<http://purl.org/NET/cpan-uri/person/andk>
+	a                    foaf:Person;
+	foaf:name            "Andreas J. König";
+	foaf:nick            "ANDK";
+	foaf:page            <https://metacpan.org/author/ANDK>.
+
 <http://purl.org/NET/cpan-uri/person/drebolo>
 	a                    foaf:Person;
 	foaf:name            "Dinis Rebolo";
@@ -213,6 +242,11 @@
 	a                    doap-bugs:Issue;
 	doap-bugs:id         "87638"^^xsd:string;
 	doap-bugs:page       <https://rt.cpan.org/Ticket/Display.html?id=87638>.
+
+<http://purl.org/NET/cpan-uri/rt/ticket/88459>
+	a                    doap-bugs:Issue;
+	doap-bugs:id         "88459"^^xsd:string;
+	doap-bugs:page       <https://rt.cpan.org/Ticket/Display.html?id=88459>.
 
 []
 	a                    nfo:FileDataObject;

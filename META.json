@@ -4,7 +4,7 @@
       "Toby Inkster (TOBYINK) <tobyink@cpan.org>"
    ],
    "dynamic_config" : 0,
-   "generated_by" : "Dist::Inkt::Profile::TOBYINK version 0.007, CPAN::Meta::Converter version 2.120921",
+   "generated_by" : "Dist::Inkt::Profile::TOBYINK version 0.009, CPAN::Meta::Converter version 2.120921",
    "keywords" : [],
    "license" : [
       "perl"
@@ -26,62 +26,66 @@
    "prereqs" : {
       "configure" : {
          "requires" : {
+            "CPAN::Meta::Requirements" : "2.000",
             "ExtUtils::MakeMaker" : "6.17"
          }
       },
       "develop" : {
          "recommends" : {
-            "Dist::Inkt" : 0
+            "Dist::Inkt" : "0"
          },
          "requires" : {
-            "Moose" : 0,
-            "MooseX::ClassAttribute" : 0,
-            "Sub::Exporter" : 0
+            "Moose" : "0",
+            "MooseX::ClassAttribute" : "0",
+            "Sub::Exporter" : "0"
          }
       },
       "runtime" : {
+         "conflicts" : {
+            "Moo" : "== 1.001000"
+         },
          "recommends" : {
-            "MooseX::ClassAttribute" : 0
+            "MooseX::ClassAttribute" : "0"
          },
          "requires" : {
             "Moo" : "1.000000",
             "Role::Tiny" : "1.000000",
-            "Sub::Exporter::Progressive" : 0
+            "Sub::Exporter::Progressive" : "0"
          }
       }
    },
    "provides" : {
       "Method::Generate::ClassAccessor" : {
          "file" : "lib/Method/Generate/ClassAccessor.pm",
-         "version" : "0.009"
+         "version" : "0.010"
       },
       "MooX::CaptainHook" : {
          "file" : "lib/MooX/CaptainHook.pm",
-         "version" : "0.009"
+         "version" : "0.010"
       },
       "MooX::CaptainHook::HandleMoose::Hack" : {
          "file" : "lib/MooX/CaptainHook.pm",
-         "version" : "0.009"
+         "version" : "0.010"
       },
       "MooX::CaptainHook::OnApplication" : {
          "file" : "lib/MooX/CaptainHook.pm",
-         "version" : "0.009"
+         "version" : "0.010"
       },
       "MooX::CaptainHook::OnApplication::Moose" : {
          "file" : "lib/MooX/CaptainHook.pm",
-         "version" : "0.009"
+         "version" : "0.010"
       },
       "MooX::CaptainHook::OnInflation" : {
          "file" : "lib/MooX/CaptainHook.pm",
-         "version" : "0.009"
+         "version" : "0.010"
       },
       "MooX::ClassAttribute" : {
          "file" : "lib/MooX/ClassAttribute.pm",
-         "version" : "0.009"
+         "version" : "0.010"
       },
       "MooX::ClassAttribute::HandleMoose" : {
          "file" : "lib/MooX/ClassAttribute/HandleMoose.pm",
-         "version" : "0.009"
+         "version" : "0.010"
       }
    },
    "release_status" : "stable",
@@ -99,9 +103,8 @@
          "web" : "https://github.com/tobyink/p5-moox-classattribute"
       }
    },
-   "version" : "0.009",
+   "version" : "0.010",
    "x_contributors" : [
       "Dinis Rebolo (DREBOLO) <drebolo@cpan.org>"
-   ],
-   "x_provides_scripts" : {}
+   ]
 }

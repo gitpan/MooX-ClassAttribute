@@ -1,77 +1,109 @@
 use strict;
 use ExtUtils::MakeMaker 6.17;
 
-my $EUMM = 'ExtUtils::MakeMaker'->VERSION;
+my $EUMM = eval( $ExtUtils::MakeMaker::VERSION );
 
 my $meta = {
-  "abstract"           => "declare class attributes Moose-style... but without Moose",
-  "author"             => ["Toby Inkster (TOBYINK) <tobyink\@cpan.org>"],
-  "dynamic_config"     => 0,
-  "generated_by"       => "Dist::Inkt::Profile::TOBYINK version 0.007, CPAN::Meta::Converter version 2.120921",
-  "keywords"           => [],
-  "license"            => ["perl_5"],
-  "meta-spec"          => {
-                            url => "http://search.cpan.org/perldoc?CPAN::Meta::Spec",
-                            version => 2,
-                          },
-  "name"               => "MooX-ClassAttribute",
-  "no_index"           => { directory => ["eg", "examples", "inc", "t", "xt"] },
-  "prereqs"            => {
-                            configure => { requires => { "ExtUtils::MakeMaker" => 6.17 } },
-                            develop   => {
-                                           recommends => { "Dist::Inkt" => 0 },
-                                           requires   => { "Moose" => 0, "MooseX::ClassAttribute" => 0, "Sub::Exporter" => 0 },
-                                         },
-                            runtime   => {
-                                           recommends => { "MooseX::ClassAttribute" => 0 },
-                                           requires   => {
-                                                           "Moo" => "1.000000",
-                                                           "Role::Tiny" => "1.000000",
-                                                           "Sub::Exporter::Progressive" => 0,
-                                                         },
-                                         },
-                          },
-  "provides"           => {
-                            "Method::Generate::ClassAccessor"         => { file => "lib/Method/Generate/ClassAccessor.pm", version => 0.009 },
-                            "MooX::CaptainHook"                       => { file => "lib/MooX/CaptainHook.pm", version => 0.009 },
-                            "MooX::CaptainHook::HandleMoose::Hack"    => { file => "lib/MooX/CaptainHook.pm", version => 0.009 },
-                            "MooX::CaptainHook::OnApplication"        => { file => "lib/MooX/CaptainHook.pm", version => 0.009 },
-                            "MooX::CaptainHook::OnApplication::Moose" => { file => "lib/MooX/CaptainHook.pm", version => 0.009 },
-                            "MooX::CaptainHook::OnInflation"          => { file => "lib/MooX/CaptainHook.pm", version => 0.009 },
-                            "MooX::ClassAttribute"                    => { file => "lib/MooX/ClassAttribute.pm", version => 0.009 },
-                            "MooX::ClassAttribute::HandleMoose"       => { file => "lib/MooX/ClassAttribute/HandleMoose.pm", version => 0.009 },
-                          },
-  "release_status"     => "stable",
-  "resources"          => {
-                            bugtracker   => {
-                                              web => "http://rt.cpan.org/Dist/Display.html?Queue=MooX-ClassAttribute",
-                                            },
-                            homepage     => "https://metacpan.org/release/MooX-ClassAttribute",
-                            license      => ["http://dev.perl.org/licenses/"],
-                            repository   => {
-                                              type => "git",
-                                              web  => "https://github.com/tobyink/p5-moox-classattribute",
-                                            },
-                            X_identifier => "http://purl.org/NET/cpan-uri/dist/MooX-ClassAttribute/project",
-                          },
-  "version"            => 0.009,
-  "x_contributors"     => ["Dinis Rebolo (DREBOLO) <drebolo\@cpan.org>"],
-  "x_provides_scripts" => {},
+  "abstract"       => "declare class attributes Moose-style... but without Moose",
+  "author"         => ["Toby Inkster (TOBYINK) <tobyink\@cpan.org>"],
+  "dynamic_config" => 0,
+  "generated_by"   => "Dist::Inkt::Profile::TOBYINK version 0.009, CPAN::Meta::Converter version 2.120921",
+  "keywords"       => [],
+  "license"        => ["perl_5"],
+  "meta-spec"      => {
+                        url => "http://search.cpan.org/perldoc?CPAN::Meta::Spec",
+                        version => 2,
+                      },
+  "name"           => "MooX-ClassAttribute",
+  "no_index"       => { directory => ["eg", "examples", "inc", "t", "xt"] },
+  "prereqs"        => {
+                        configure => {
+                                       requires => {
+                                         "CPAN::Meta::Requirements" => "2.000",
+                                         "ExtUtils::MakeMaker"      => 6.17,
+                                       },
+                                     },
+                        develop   => {
+                                       recommends => { "Dist::Inkt" => 0 },
+                                       requires   => { "Moose" => 0, "MooseX::ClassAttribute" => 0, "Sub::Exporter" => 0 },
+                                     },
+                        runtime   => {
+                                       conflicts  => { Moo => "== 1.001000" },
+                                       recommends => { "MooseX::ClassAttribute" => 0 },
+                                       requires   => {
+                                                       "Moo" => "1.000000",
+                                                       "Role::Tiny" => "1.000000",
+                                                       "Sub::Exporter::Progressive" => 0,
+                                                     },
+                                     },
+                      },
+  "provides"       => {
+                        "Method::Generate::ClassAccessor"         => { file => "lib/Method/Generate/ClassAccessor.pm", version => "0.010" },
+                        "MooX::CaptainHook"                       => { file => "lib/MooX/CaptainHook.pm", version => "0.010" },
+                        "MooX::CaptainHook::HandleMoose::Hack"    => { file => "lib/MooX/CaptainHook.pm", version => "0.010" },
+                        "MooX::CaptainHook::OnApplication"        => { file => "lib/MooX/CaptainHook.pm", version => "0.010" },
+                        "MooX::CaptainHook::OnApplication::Moose" => { file => "lib/MooX/CaptainHook.pm", version => "0.010" },
+                        "MooX::CaptainHook::OnInflation"          => { file => "lib/MooX/CaptainHook.pm", version => "0.010" },
+                        "MooX::ClassAttribute"                    => { file => "lib/MooX/ClassAttribute.pm", version => "0.010" },
+                        "MooX::ClassAttribute::HandleMoose"       => {
+                                                                       file => "lib/MooX/ClassAttribute/HandleMoose.pm",
+                                                                       version => "0.010",
+                                                                     },
+                      },
+  "release_status" => "stable",
+  "resources"      => {
+                        bugtracker   => {
+                                          web => "http://rt.cpan.org/Dist/Display.html?Queue=MooX-ClassAttribute",
+                                        },
+                        homepage     => "https://metacpan.org/release/MooX-ClassAttribute",
+                        license      => ["http://dev.perl.org/licenses/"],
+                        repository   => {
+                                          type => "git",
+                                          web  => "https://github.com/tobyink/p5-moox-classattribute",
+                                        },
+                        X_identifier => "http://purl.org/NET/cpan-uri/dist/MooX-ClassAttribute/project",
+                      },
+  "version"        => "0.010",
+  "x_contributors" => ["Dinis Rebolo (DREBOLO) <drebolo\@cpan.org>"],
 };
 
 my %dynamic_config;
+for my $stage (keys %{$meta->{prereqs}})
+{
+	my $conflicts = $meta->{prereqs}{$stage}{conflicts} or next;
+	require CPAN::Meta::Requirements;
+	$conflicts = 'CPAN::Meta::Requirements'->from_string_hash($conflicts);
+	
+	for my $module ($conflicts->required_modules)
+	{
+		eval "require $module" or next;
+		my $installed = eval(sprintf('$%s::VERSION', $module));
+		$conflicts->accepts_module($module, $installed) or next;
+		
+		my $message = "\n".
+			"** This version of $meta->{name} conflicts with the version of\n".
+			"** module $module ($installed) you have installed.\n";
+		die($message . "\n" . "Bailing out")
+			if $stage eq 'build' || $stage eq 'configure';
+		
+		$message .= "**\n".
+			"** It's strongly recommended that you update it after\n".
+			"** installing this version of $meta->{name}.\n";
+		warn("$message\n");
+	}
+}
 
 my %WriteMakefileArgs = (
-	ABSTRACT           => $meta->{abstract},
-	AUTHOR             => ($EUMM >= 6.5702 ? $meta->{author} : $meta->{author}[0]),
-	DISTNAME           => $meta->{name},
-	VERSION            => $meta->{version},
-	EXE_FILES          => [ map $_->{file}, values %{ $meta->{x_provides_scripts} || {} } ],
-	NAME               => do { my $n = $meta->{name}; $n =~ s/-/::/g; $n },
+	ABSTRACT   => $meta->{abstract},
+	AUTHOR     => ($EUMM >= 6.5702 ? $meta->{author} : $meta->{author}[0]),
+	DISTNAME   => $meta->{name},
+	VERSION    => $meta->{version},
+	EXE_FILES  => [ map $_->{file}, values %{ $meta->{x_provides_scripts} || {} } ],
+	NAME       => do { my $n = $meta->{name}; $n =~ s/-/::/g; $n },
 	%dynamic_config,
 );
 
-$WriteMakefileArgs{LICENSE} => $meta->{license}[0] if $EUMM >= 6.3001;
+$WriteMakefileArgs{LICENSE} = $meta->{license}[0] if $EUMM >= 6.3001;
 
 sub deps
 {

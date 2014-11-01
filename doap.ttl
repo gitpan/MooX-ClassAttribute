@@ -15,18 +15,12 @@
 	a                    doap:Project;
 	dc:contributor       <http://purl.org/NET/cpan-uri/person/tobyink>;
 	doap-deps:develop-recommendation [ doap-deps:on "Dist::Inkt"^^doap-deps:CpanId ];
-	doap-deps:develop-requirement [ doap-deps:on "Moose"^^doap-deps:CpanId ], [
-		doap-deps:on "MooseX::ClassAttribute"^^doap-deps:CpanId;
-	], [ doap-deps:on "Sub::Exporter"^^doap-deps:CpanId ];
-	doap-deps:runtime-conflict [ doap-deps:on "Moo == 1.001000"^^doap-deps:CpanId ];
-	doap-deps:runtime-recommendation [
-		doap-deps:on "MooseX::ClassAttribute"^^doap-deps:CpanId;
+	doap-deps:runtime-conflict [ doap-deps:on "Moo == 1.001000"^^doap-deps:CpanId ], [
+		doap-deps:on "MooseX::ClassAttribute <= 0.26"^^doap-deps:CpanId;
 	];
-	doap-deps:runtime-requirement [ doap-deps:on "Moo 1.000000"^^doap-deps:CpanId ], [
+	doap-deps:runtime-requirement [ doap-deps:on "perl 5.008000"^^doap-deps:CpanId ], [ doap-deps:on "Moo 1.000000"^^doap-deps:CpanId ], [
 		doap-deps:on "Role::Tiny 1.000000"^^doap-deps:CpanId;
-	], [
-		doap-deps:on "Sub::Exporter::Progressive"^^doap-deps:CpanId;
-	];
+	], [ doap-deps:on "Exporter::Shiny"^^doap-deps:CpanId ];
 	doap:bug-database    <http://rt.cpan.org/Dist/Display.html?Queue=MooX-ClassAttribute>;
 	doap:created         "2012-12-27"^^xsd:date;
 	doap:developer       <http://purl.org/NET/cpan-uri/person/tobyink>;
@@ -36,7 +30,7 @@
 	doap:maintainer      <http://purl.org/NET/cpan-uri/person/tobyink>;
 	doap:name            "MooX-ClassAttribute";
 	doap:programming-language "Perl";
-	doap:release         <http://purl.org/NET/cpan-uri/dist/MooX-ClassAttribute/v_0-001>, <http://purl.org/NET/cpan-uri/dist/MooX-ClassAttribute/v_0-002>, <http://purl.org/NET/cpan-uri/dist/MooX-ClassAttribute/v_0-003>, <http://purl.org/NET/cpan-uri/dist/MooX-ClassAttribute/v_0-004>, <http://purl.org/NET/cpan-uri/dist/MooX-ClassAttribute/v_0-005>, <http://purl.org/NET/cpan-uri/dist/MooX-ClassAttribute/v_0-006>, <http://purl.org/NET/cpan-uri/dist/MooX-ClassAttribute/v_0-007>, <http://purl.org/NET/cpan-uri/dist/MooX-ClassAttribute/v_0-008>, <http://purl.org/NET/cpan-uri/dist/MooX-ClassAttribute/v_0-009>, <http://purl.org/NET/cpan-uri/dist/MooX-ClassAttribute/v_0-010>;
+	doap:release         <http://purl.org/NET/cpan-uri/dist/MooX-ClassAttribute/v_0-001>, <http://purl.org/NET/cpan-uri/dist/MooX-ClassAttribute/v_0-002>, <http://purl.org/NET/cpan-uri/dist/MooX-ClassAttribute/v_0-003>, <http://purl.org/NET/cpan-uri/dist/MooX-ClassAttribute/v_0-004>, <http://purl.org/NET/cpan-uri/dist/MooX-ClassAttribute/v_0-005>, <http://purl.org/NET/cpan-uri/dist/MooX-ClassAttribute/v_0-006>, <http://purl.org/NET/cpan-uri/dist/MooX-ClassAttribute/v_0-007>, <http://purl.org/NET/cpan-uri/dist/MooX-ClassAttribute/v_0-008>, <http://purl.org/NET/cpan-uri/dist/MooX-ClassAttribute/v_0-009>, <http://purl.org/NET/cpan-uri/dist/MooX-ClassAttribute/v_0-010>, <http://purl.org/NET/cpan-uri/dist/MooX-ClassAttribute/v_0-011>;
 	doap:repository      [
 		a doap:GitRepository;
 		doap:browse <https://github.com/tobyink/p5-moox-classattribute>;
@@ -201,11 +195,35 @@
 	doap:file-release    <http://backpan.cpan.org/authors/id/T/TO/TOBYINK/MooX-ClassAttribute-0.010.tar.gz>;
 	doap:revision        "0.010"^^xsd:string.
 
+<http://purl.org/NET/cpan-uri/dist/MooX-ClassAttribute/v_0-011>
+	a                    doap:Version;
+	dc:identifier        "MooX-ClassAttribute-0.011"^^xsd:string;
+	dc:issued            "2014-11-01"^^xsd:date;
+	doap-changeset:changeset [
+		doap-changeset:item [
+			a doap-changeset:Change;
+			rdfs:label "Use Exporter::Shiny instead of Sub::Exporter::Progressive.";
+		], [
+			a doap-changeset:Packaging;
+			rdfs:label "Don't make Moose/MooseX::ClassAttribute runtime recommendations or development requirements.";
+			doap-changeset:thanks <http://purl.org/NET/cpan-uri/person/boftx>, <urn:uuid:0252a506-8e0c-4d54-87f7-e0ba3201f25e>;
+		];
+	];
+	doap-changeset:released-by <http://purl.org/NET/cpan-uri/person/tobyink>;
+	doap:file-release    <http://backpan.cpan.org/authors/id/T/TO/TOBYINK/MooX-ClassAttribute-0.011.tar.gz>;
+	doap:revision        "0.011"^^xsd:string.
+
 <http://purl.org/NET/cpan-uri/person/andk>
 	a                    foaf:Person;
 	foaf:name            "Andreas J. König";
 	foaf:nick            "ANDK";
 	foaf:page            <https://metacpan.org/author/ANDK>.
+
+<http://purl.org/NET/cpan-uri/person/boftx>
+	a                    foaf:Person;
+	foaf:name            "Jim Bacon";
+	foaf:nick            "BOFTX";
+	foaf:page            <https://metacpan.org/author/BOFTX>.
 
 <http://purl.org/NET/cpan-uri/person/drebolo>
 	a                    foaf:Person;
@@ -248,33 +266,9 @@
 	doap-bugs:id         "88459"^^xsd:string;
 	doap-bugs:page       <https://rt.cpan.org/Ticket/Display.html?id=88459>.
 
-[]
-	a                    nfo:FileDataObject;
-	dc:license           <http://dev.perl.org/licenses/>;
-	dc:rightsHolder      <http://purl.org/NET/cpan-uri/person/tobyink>;
-	nfo:fileName         "meta/people.pret".
-
-[]
-	a                    nfo:FileDataObject, nfo:TextDocument;
-	dc:license           <http://dev.perl.org/licenses/>;
-	dc:rightsHolder      <http://purl.org/NET/cpan-uri/person/tobyink>;
-	dc:source            [
-		a nfo:FileDataObject, nfo:SourceCode;
-		rdfs:label "MooX::ClassAttribute";
-		nfo:fileName "lib/MooX/ClassAttribute.pm";
-		nfo:programmingLanguage "Perl";
-	];
-	nfo:fileName         "README".
-
-[]
-	a                    nfo:FileDataObject, nfo:TextDocument;
-	dc:license           <http://dev.perl.org/licenses/>;
-	dc:rightsHolder      <http://purl.org/NET/cpan-uri/person/tobyink>;
-	dc:source            [
-		a nfo:FileDataObject;
-		nfo:fileName "meta/changes.pret";
-	];
-	nfo:fileName         "Changes".
+<urn:uuid:0252a506-8e0c-4d54-87f7-e0ba3201f25e>
+	a                    foaf:Organization;
+	foaf:name            "cPanel, Inc.".
 
 []
 	a                    nfo:FileDataObject, nfo:SourceCode;
@@ -306,4 +300,32 @@
 	dc:license           <http://dev.perl.org/licenses/>;
 	dc:rightsHolder      <http://purl.org/NET/cpan-uri/person/tobyink>;
 	nfo:fileName         "meta/makefile.pret".
+
+[]
+	a                    nfo:FileDataObject;
+	dc:license           <http://dev.perl.org/licenses/>;
+	dc:rightsHolder      <http://purl.org/NET/cpan-uri/person/tobyink>;
+	nfo:fileName         "meta/people.pret".
+
+[]
+	a                    nfo:FileDataObject, nfo:TextDocument;
+	dc:license           <http://dev.perl.org/licenses/>;
+	dc:rightsHolder      <http://purl.org/NET/cpan-uri/person/tobyink>;
+	dc:source            [
+		a nfo:FileDataObject, nfo:SourceCode;
+		rdfs:label "MooX::ClassAttribute";
+		nfo:fileName "lib/MooX/ClassAttribute.pm";
+		nfo:programmingLanguage "Perl";
+	];
+	nfo:fileName         "README".
+
+[]
+	a                    nfo:FileDataObject, nfo:TextDocument;
+	dc:license           <http://dev.perl.org/licenses/>;
+	dc:rightsHolder      <http://purl.org/NET/cpan-uri/person/tobyink>;
+	dc:source            [
+		a nfo:FileDataObject;
+		nfo:fileName "meta/changes.pret";
+	];
+	nfo:fileName         "Changes".
 

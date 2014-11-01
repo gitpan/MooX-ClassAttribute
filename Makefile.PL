@@ -7,7 +7,7 @@ my $meta = {
   "abstract"       => "declare class attributes Moose-style... but without Moose",
   "author"         => ["Toby Inkster (TOBYINK) <tobyink\@cpan.org>"],
   "dynamic_config" => 0,
-  "generated_by"   => "Dist::Inkt::Profile::TOBYINK version 0.009, CPAN::Meta::Converter version 2.120921",
+  "generated_by"   => "Dist::Inkt::Profile::TOBYINK version 0.023, CPAN::Meta::Converter version 2.142690",
   "keywords"       => [],
   "license"        => ["perl_5"],
   "meta-spec"      => {
@@ -18,37 +18,29 @@ my $meta = {
   "no_index"       => { directory => ["eg", "examples", "inc", "t", "xt"] },
   "prereqs"        => {
                         configure => {
-                                       requires => {
-                                         "CPAN::Meta::Requirements" => "2.000",
-                                         "ExtUtils::MakeMaker"      => 6.17,
-                                       },
+                                       recommends => { "CPAN::Meta::Requirements" => "2.000" },
+                                       requires   => { "ExtUtils::MakeMaker" => 6.17 },
                                      },
-                        develop   => {
-                                       recommends => { "Dist::Inkt" => 0 },
-                                       requires   => { "Moose" => 0, "MooseX::ClassAttribute" => 0, "Sub::Exporter" => 0 },
-                                     },
+                        develop   => { recommends => { "Dist::Inkt" => 0 } },
                         runtime   => {
-                                       conflicts  => { Moo => "== 1.001000" },
-                                       recommends => { "MooseX::ClassAttribute" => 0 },
-                                       requires   => {
-                                                       "Moo" => "1.000000",
-                                                       "Role::Tiny" => "1.000000",
-                                                       "Sub::Exporter::Progressive" => 0,
-                                                     },
+                                       conflicts => { "Moo" => "== 1.001000", "MooseX::ClassAttribute" => "<= 0.26" },
+                                       requires  => {
+                                                      "Exporter::Shiny" => 0,
+                                                      "Moo" => "1.000000",
+                                                      "perl" => "5.008000",
+                                                      "Role::Tiny" => "1.000000",
+                                                    },
                                      },
                       },
   "provides"       => {
-                        "Method::Generate::ClassAccessor"         => { file => "lib/Method/Generate/ClassAccessor.pm", version => "0.010" },
-                        "MooX::CaptainHook"                       => { file => "lib/MooX/CaptainHook.pm", version => "0.010" },
-                        "MooX::CaptainHook::HandleMoose::Hack"    => { file => "lib/MooX/CaptainHook.pm", version => "0.010" },
-                        "MooX::CaptainHook::OnApplication"        => { file => "lib/MooX/CaptainHook.pm", version => "0.010" },
-                        "MooX::CaptainHook::OnApplication::Moose" => { file => "lib/MooX/CaptainHook.pm", version => "0.010" },
-                        "MooX::CaptainHook::OnInflation"          => { file => "lib/MooX/CaptainHook.pm", version => "0.010" },
-                        "MooX::ClassAttribute"                    => { file => "lib/MooX/ClassAttribute.pm", version => "0.010" },
-                        "MooX::ClassAttribute::HandleMoose"       => {
-                                                                       file => "lib/MooX/ClassAttribute/HandleMoose.pm",
-                                                                       version => "0.010",
-                                                                     },
+                        "Method::Generate::ClassAccessor"         => { file => "lib/Method/Generate/ClassAccessor.pm", version => 0.011 },
+                        "MooX::CaptainHook"                       => { file => "lib/MooX/CaptainHook.pm", version => 0.011 },
+                        "MooX::CaptainHook::HandleMoose::Hack"    => { file => "lib/MooX/CaptainHook.pm", version => 0.011 },
+                        "MooX::CaptainHook::OnApplication"        => { file => "lib/MooX/CaptainHook.pm", version => 0.011 },
+                        "MooX::CaptainHook::OnApplication::Moose" => { file => "lib/MooX/CaptainHook.pm", version => 0.011 },
+                        "MooX::CaptainHook::OnInflation"          => { file => "lib/MooX/CaptainHook.pm", version => 0.011 },
+                        "MooX::ClassAttribute"                    => { file => "lib/MooX/ClassAttribute.pm", version => 0.011 },
+                        "MooX::ClassAttribute::HandleMoose"       => { file => "lib/MooX/ClassAttribute/HandleMoose.pm", version => 0.011 },
                       },
   "release_status" => "stable",
   "resources"      => {
@@ -59,11 +51,13 @@ my $meta = {
                         license      => ["http://dev.perl.org/licenses/"],
                         repository   => {
                                           type => "git",
+                                          url  => "git://github.com/tobyink/p5-moox-classattribute.git",
                                           web  => "https://github.com/tobyink/p5-moox-classattribute",
                                         },
-                        X_identifier => "http://purl.org/NET/cpan-uri/dist/MooX-ClassAttribute/project",
+                        x_identifier => "http://purl.org/NET/cpan-uri/dist/MooX-ClassAttribute/project",
                       },
-  "version"        => "0.010",
+  "version"        => 0.011,
+  "x_breaks"       => { "Moo" => "== 1.001000", "MooseX::ClassAttribute" => "<= 0.26" },
   "x_contributors" => ["Dinis Rebolo (DREBOLO) <drebolo\@cpan.org>"],
 };
 
@@ -71,7 +65,7 @@ my %dynamic_config;
 for my $stage (keys %{$meta->{prereqs}})
 {
 	my $conflicts = $meta->{prereqs}{$stage}{conflicts} or next;
-	require CPAN::Meta::Requirements;
+	eval { require CPAN::Meta::Requirements } or last;
 	$conflicts = 'CPAN::Meta::Requirements'->from_string_hash($conflicts);
 	
 	for my $module ($conflicts->required_modules)
@@ -100,6 +94,7 @@ my %WriteMakefileArgs = (
 	VERSION    => $meta->{version},
 	EXE_FILES  => [ map $_->{file}, values %{ $meta->{x_provides_scripts} || {} } ],
 	NAME       => do { my $n = $meta->{name}; $n =~ s/-/::/g; $n },
+	test       => { TESTS => "t/*.t" },
 	%dynamic_config,
 );
 
@@ -112,6 +107,7 @@ sub deps
 	{
 		for my $dep (keys %{$meta->{prereqs}{$stage}{requires}})
 		{
+			next if $dep eq 'perl';
 			my $ver = $meta->{prereqs}{$stage}{requires}{$dep};
 			$r{$dep} = $ver if !exists($r{$dep}) || $ver >= $r{$dep};
 		}
@@ -144,16 +140,19 @@ else
 }
 
 {
-	my $minperl = delete $WriteMakefileArgs{PREREQ_PM}{perl};
-	exists($WriteMakefileArgs{$_}) && delete($WriteMakefileArgs{$_}{perl})
-		for qw(BUILD_REQUIRES TEST_REQUIRES CONFIGURE_REQUIRES);
-	if ($minperl and $EUMM >= 6.48)
+	my ($minperl) = reverse sort(
+		grep defined && /^[0-9]+(\.[0-9]+)?$/,
+		map $meta->{prereqs}{$_}{requires}{perl},
+		qw( configure build runtime )
+	);
+	
+	if (defined($minperl))
 	{
-		$WriteMakefileArgs{MIN_PERL_VERSION} ||= $minperl;
-	}
-	elsif ($minperl)
-	{
-		die "Need Perl >= $minperl" unless $] >= $minperl;
+		die "Installing $meta->{name} requires Perl >= $minperl"
+			unless $] >= $minperl;
+		
+		$WriteMakefileArgs{MIN_PERL_VERSION} ||= $minperl
+			if $EUMM >= 6.48;
 	}
 }
 

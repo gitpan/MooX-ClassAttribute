@@ -1,5 +1,5 @@
 This file contains message digests of all files listed in MANIFEST,
-signed via the Module::Signature module, version 0.70.
+signed via the Module::Signature module, version 0.73.
 
 To verify the content in this distribution, first make sure you have
 Module::Signature installed, then type:
@@ -14,24 +14,24 @@ not run its Makefile.PL or Build.PL.
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-SHA1 294505f858f11dd062e9916e3f50d88210a9ef54 CONTRIBUTING
-SHA1 adc48d52aea4e3fc3b24134b351ad1a15add03c0 COPYRIGHT
-SHA1 f8c1480c20dfa279e9fb85b1ffc3accd83315e17 CREDITS
-SHA1 6c9f2f934c74370dbaf980ba22d78d98c23719d3 Changes
-SHA1 ec5a7b4f3023f03ebf821b57690758f7e6f3ae2a LICENSE
-SHA1 1aa35b0ce497714b48e079bb0646238ec574ec4d MANIFEST
-SHA1 730550115c75f154c17d6c9c19ed0e5dcc3c4b0c META.json
-SHA1 33dd997cccc1d6cf363af7e645fbd35c9ddad113 META.yml
-SHA1 f783084b3d00ec2a33b8960b50fef4c1de94f24c Makefile.PL
+SHA1 b69663c69fd46547a5b3c3395f8f586d9bfe7002 COPYRIGHT
+SHA1 0642b16733116d6101cd82bfdb9dd54247ef8c66 CREDITS
+SHA1 0792e25eb96e639d8227de85694534f99e0b1a91 Changes
+SHA1 9a930f0a7cd2cc48e82f39a6cf4054bfcb1bb63e INSTALL
+SHA1 34f5e12514b91055de4b164a1f2327ef5c30ba53 LICENSE
+SHA1 ba8f170896f52e915eb9495b24389c4ff0e274bf MANIFEST
+SHA1 f2981c55c59073f6daae7f39ba4c2202b021942e META.json
+SHA1 2eb557702e0cd2d6da41533496e211df5d296353 META.yml
+SHA1 905d0e3db8e2cf2c121a85b4cacd35608f39c087 Makefile.PL
 SHA1 5b1e26db525c6d55e87f805bdea14e6fb599579e README
 SHA1 e81357bfbb51ed84ea6ab2b0417f1425d5fa5323 dist.ini
-SHA1 da2a8ad94f0a836f11d04327dbb73ddeab05007e doap.ttl
+SHA1 3bd3bd452f56785c7874204aa594d647b1a1c755 doap.ttl
 SHA1 22210e2dee46a0825cce213e5586a2b4d3fa6bc6 examples/binomial_name.pl
 SHA1 7f9dfb385c9c80a75505491cfe16b0f910ff283d examples/hooks/track-consumers.pl
-SHA1 69a23a03e4d7fabd3da654a89134ef1e05df240c lib/Method/Generate/ClassAccessor.pm
-SHA1 0efe08bf92422d20b3480f0effbe1b7b9f2a9524 lib/MooX/CaptainHook.pm
-SHA1 e84c4dd908e366153a37e18e6b94bdb8edac4d09 lib/MooX/ClassAttribute.pm
-SHA1 64647a966a9b7e3c686ca120d64f5f115cecf180 lib/MooX/ClassAttribute/HandleMoose.pm
+SHA1 7c67c4f2ace1f7ed3659defedc6198ad0de0bf33 lib/Method/Generate/ClassAccessor.pm
+SHA1 b10bc14dbf7c1c873301b27fc0d10faede8be570 lib/MooX/CaptainHook.pm
+SHA1 656a370c7f31cd90a133af93e35846b97ca2830c lib/MooX/ClassAttribute.pm
+SHA1 c90297819a100a600f4397d929b5b790747c94cd lib/MooX/ClassAttribute/HandleMoose.pm
 SHA1 1066638f41ba247cdce1ea366d05dade40b5e5a2 t/01basic.t
 SHA1 6c43a212ad779996adb712592aa84d88389ed312 t/02class.t
 SHA1 a253b748e0c941f43a63773dfc620362ad6d5d8d t/03role.t
@@ -44,9 +44,9 @@ SHA1 3045d4de7715e54521fd1945ad3d4c5f83f5bfe7 t/23hook_infl_noop.t
 SHA1 ce1c70022cba965ae444af6e98c0f1f3a362a17b t/24hook_infl_backwards.t
 SHA1 4eba72cd796a5c8c866549201b8abd4114a69736 t/30mgca.t
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.12 (GNU/Linux)
+Version: GnuPG v1
 
-iEYEARECAAYFAlIpn9QACgkQzr+BKGoqfTnGwwCgnjI83ubSmBqEFaWtwP1QYkBw
-HXoAoI3KIpMu/jm5IfUk7dcwhiFaWyzG
-=NZrz
+iEYEARECAAYFAlRVBFUACgkQzr+BKGoqfTnCmwCdFWCo/WxeJGsglJDwR3UowMSh
+1/IAn0dgwGVtD3ls/dQGrbTcMtf/lsYb
+=l0dj
 -----END PGP SIGNATURE-----

@@ -6,6 +6,17 @@ Home page:    <https://metacpan.org/release/MooX-ClassAttribute>
 Bug tracker:  <http://rt.cpan.org/Dist/Display.html?Queue=MooX-ClassAttribute>
 Maintainer:   Toby Inkster (TOBYINK) <tobyink@cpan.org>
 
+0.011	2014-11-01
+
+ [ Packaging ]
+ - Don't make Moose/MooseX::ClassAttribute runtime recommendations or
+   development requirements.
+   Jim Bacon++
+   cPanel, Inc.++
+
+ [ Other ]
+ - Use Exporter::Shiny instead of Sub::Exporter::Progressive.
+
 0.010	2013-09-06
 
  [ Bug Fixes ]
